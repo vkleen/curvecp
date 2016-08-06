@@ -4,7 +4,9 @@
 
 # adjust the following path to the location of your Musl libc tree 
 # and gcc wrapper
-CC="/f/b/musl1114/bin/musl-gcc"
+if [ -z "$CC" ]; then
+    CC="/f/b/musl1114/bin/musl-gcc"
+fi
 
 # stop at first error
 set -e
